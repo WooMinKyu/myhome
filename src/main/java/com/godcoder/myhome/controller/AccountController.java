@@ -30,7 +30,7 @@ public class AccountController {
     }
 
     @PostMapping("/register")
-    public String register(User user) {
+    public String register(User user) throws Exception {
         userService.save(user);
         return "redirect:/";
     }
